@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<config>
+	<lifts time-to-next-floor = "10" max-weight = "450">	
+		<lift start = "0" stop = "5"/>
+		<lift start = "5" stop = "10"/>
+	</lifts>
+	<floors number = "10"/> 
+	<doors time-to-open = "2" time-to-close = "2"/>
+	<passengers lift-entry-time = "1" lift-exit-time ="1"/>
+</config> 
