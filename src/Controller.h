@@ -5,6 +5,7 @@
 #include "Button.h"
 #include "Lift.h"
 #include "Floor.h"
+#include "Safety.h"
 using namespace std;
 
 class Controller {
@@ -18,10 +19,14 @@ public:
 	void checkToOpenDoor(Lift l, Floor f);
 	void emergencyButton(Lift l, Button b);
 	void hazard(Lift l);
-
-private:
+	Controller(vector<Lift> lifts, vector<Floor> floors);
 	vector<Lift> lifts;
 	vector<Floor> floors;
+	void overloaded(Lift l);
+	Safety safety;
+
+private:
 	vector<Floor> listOfStops;
+
 };
 #endif

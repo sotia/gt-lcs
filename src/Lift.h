@@ -3,14 +3,13 @@
 #include <string>
 #include <vector>
 #include "Passenger.h"
+#include "Button.h"
 using namespace std;
 
 class Lift {
 
 private:
-	int startFloor;
-	int stopFloor;
-	int maxWeightPeople;
+	
 	int curNumPeople;
 	int curNumFloor;
 	int speed;
@@ -19,8 +18,18 @@ private:
 	bool stateLiftDoor;
 
 public:
+	int maxWeightPeople;
+
+	int curWeight;
+	int id;
+	int startFloor;
+	int stopFloor;
+	int openDoorTime;
+	int closeDoorTime;
+	int timeToNextFloor;
 	vector<Passenger> passengersInLift;
-	Lift(int startFloor,int stopFloor, int maxWeight);
+	vector<Button> buttons;
+	Lift(int id, int startFloor,int stopFloor, int maxWeight, int timeToNextFloor, int openDoorTime, int closeDoorTime );
 	bool isMoveUp();
 	bool isMoveDown();
 	bool isOnService();
@@ -28,7 +37,7 @@ public:
 	void removePassenger(Passenger p);
 	int getCurrentFloor();
 	int getSpeed();
-	int getWeight();
+	int getCurWeight();
 	int getNumPassengers();
 	int getToFloor();
 	void setOnService(bool state);

@@ -8,6 +8,5 @@ using namespace std;
 class Safety {
 public:
 	void stopLift(Lift l);
-	bool isOverloaded(Lift l);
 };
 #endif

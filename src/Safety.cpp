@@ -6,3 +6,6 @@ void Safety::stopLift(Lift l){
 	l.setOnService(false);
 	cout << "The lift is stopped because of an emergency situation!!!" << endl;
 }
+
+
+

@@ -13,10 +13,13 @@ public:
 	int destinationFloor;
 	int originalFloor;
 	time_t time;
-
+	int entryTime;
+	int exitTime;
+	int direction; // if it is a positive number it means that the passengers want to move up
 public:
 	//constructor
-	Passenger(int weight, int destinationFloor, int originalFloor, float time);
+	Passenger(int weight, int destinationFloor, int originalFloor, float time,
+			int entryTime, int exitTime);
 	float waitingTime();
 	string pressButton();
 	vector<Passenger> start(bool flag);

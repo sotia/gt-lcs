@@ -10,8 +10,6 @@ public:
 	bool isPressed(string buttonName);
 	string getButtonName();
 	bool butState;
-
-private:
 	string buttonName;
 };
 #endif
